@@ -1,0 +1,36 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer
+               fixedInViewport
+               class="side-nav"
+               [attr.role]="(isMobile$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isMobile$ | async) ? 'over':'side'"
+               [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+      <a mat-list-item routerLink="/login" (click)="drawer.close()">Login</a>
+      <a mat-list-item routerLink="/kanban" (click)="drawer.close()">Kanban Demo</a>
+      <a mat-list-item routerLink="/customers" (click)="drawer.close()">SSR Demo</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isMobile$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="logo" routerLink="/">Fire Task</span>
+      <span class="fill-space"></span>
+      <div *ngIf="!(isMobile$ | async)">
+        <a mat-button routerLink="/kanban">Kanban Demo</a>
+        <a mat-button routerLink="/customers">SSR Demo</a>
+        <a mat-button routerLink="/login">Login</a>
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

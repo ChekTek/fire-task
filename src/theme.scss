@@ -1,0 +1,33 @@
+/* For use in src/lib/core/theming/_palette.scss */
+$md-custom: (
+    50 : #eaebed,
+    100 : #cacdd1,
+    200 : #a6acb3,
+    300 : #828b94,
+    400 : #68727d,
+    500 : #4d5966,
+    600 : #46515e,
+    700 : #3d4853,
+    800 : #343e49,
+    900 : #252e38,
+    A100 : #82bdff,
+    A200 : #4fa2ff,
+    A400 : #1c87ff,
+    A700 : #0379ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fire-task-86bb5": {
+      "hosting": {
+        "fire-task": [
+          "fire-task-86bb5"
+        ]
+      }
+    }
+  }
+}
